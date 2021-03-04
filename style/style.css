@@ -1,0 +1,377 @@
+/*Site tolerate up to maximum all size and minimum 200px and may be less than 200px*/
+body{
+background-image:linear-gradient(rgba(0,0,0,1),rgba(0,0,200,1),rgba(0,0,0,1));
+}
+
+#loading_div{
+margin-top:30vh;
+margin-left:40vw;
+}
+#loading_div_img_1{
+width:20vw;
+height:auto;	
+}
+#loading_div_img_2{
+width:20vw;
+height:auto;
+display:none;
+}
+#loading_div_img_3{
+width:20vw;
+height:auto;
+display:none;
+}
+
+#start{
+display:none;	
+	
+}
+
+#check{
+	display:none;
+}
+
+hr{
+	color:rgba(0,255,0,1);
+}
+a{
+	color:rgba(0,255,255,1);
+}
+::placeholder{
+	color:rgba(255,100,0,1);
+}
+:-ms-input-placeholder{
+	/*for IE*/
+	color:rgba(255,100,0,1);
+}
+::-ms-input-placeholder{
+	/*for Microsoft Edge*/
+	color:rgba(255,100,0,1);
+}
+#header{
+	 position: fixed;
+	 left:0;
+	 top:0;
+	 right:0;
+   width:100%;
+   height:70px;
+   /*70px use here*/
+background-color:rgba(0,0,0,1);
+}
+
+#header_left{
+	float:left;
+}
+#header_right{
+	float:right;
+}
+
+#header_left_table_tr_td_image{
+	height:60px;
+width:auto;
+
+}
+
+#header_left_table_tr_td_a{
+	text-decoration:none;
+}
+
+/*Right header*/
+#header_right_table{
+	 padding:0.5%;
+}
+
+#header_right_table_tr_td_1{
+	padding:10px;
+	border:2px dashed rgba(0,255,0,1);
+	
+}
+
+#header_right_table_tr_td_2{
+	padding:10px;
+border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_3{
+	padding:10px;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_4{
+		padding:10px;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_5{
+		padding:10px;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+
+
+#header_right_table_tr_td_1_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_2_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_3_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_4_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_5_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);
+}
+
+
+
+
+
+/*body*/
+.body_footer{
+	margin-top:70px;
+	width:100%;
+}
+/*1630px use here for body and rest are for footer*/
+#body{
+	
+width:100%;
+left:0;
+right:0;
+}
+
+
+
+#body_about{
+	width:100%;
+	color:rgba(0,255,0,1);
+	border:2px solid rgba(0,0,255,1);
+}
+
+#body_about_p{
+	
+	color:rgba(255,150,0,1);
+	
+}
+
+
+
+/*footer*/
+#footer{
+	
+width:100%;
+left:0;
+right:0;
+	/*500px use here*/
+}
+
+
+#footer_link{
+	width:100%;
+	height:50px;
+	color:rgba(0,255,0,1);
+	border:2px solid rgba(0,0,255,1);
+
+}
+
+#footer_link_a{
+	text-decoration:none;
+}
+
+#footer_link_a_img{
+	height:40px;
+	
+}
+
+#footer_copyright{
+	width:100%;
+	height:250px;
+	border:2px solid rgba(0,0,255,1);
+
+}
+#footer_copyright_table{
+	border:2px dashed rgba(0,255,0,1);
+	width:100%;
+	text-align:center;
+}
+#footer_copyright_table_tr_td_a{
+	text-decoration:none;
+	color:rgba(0,255,0,1);	
+	
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(max-width:900px){
+/*it is for mobile phone screen and tablet*/	
+
+	/*header modification start*/
+	
+	#header{
+   width:100%;
+    /*70px use here*/
+background-color:rgba(0,0,0,1);
+}
+
+#header_left{
+	height:70px;
+	width:100%;
+	/*Now here it is top*/
+}
+#header_right{
+	width:100%;
+	margin-top:100vh;
+	overflow:scroll;
+	background-color:rgba(0,0,100,0.8);
+	 transition: margin-top 2s;
+	/*And it is down*/ /*70px height margin bottom (applied by bottom element) also apply here*/
+}
+
+#header_left_table_tr_td_image{
+	height:60px;
+width:auto;
+
+}
+/*menu design start here*/
+#header_left_table{
+	width:100%;
+}
+
+#header_left_table_tr_menu{
+	border:2px solid rgba(0,255,0,1);
+width:60px;
+}
+
+
+#header_left_table_menu_c1{	
+display:block;
+}
+
+#header_left_table_menu_c1_s1{
+background-color:rgba(0,255,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;	
+}
+
+#header_left_table_menu_c1_s2{	
+background-color:rgba(0,255,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;
+}
+
+#header_left_table_menu_c1_s3{	
+background-color:rgba(0,255,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;
+}
+
+#header_left_table_menu_c2{	
+display:none;
+}
+
+#header_left_table_menu_c2_s1{	
+background-color:rgba(255,0,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;
+}
+
+#header_left_table_menu_c2_s2{	
+background-color:rgba(255,0,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;
+}
+
+#header_left_table_menu_c2_s3{	
+background-color:rgba(255,0,0,1);
+	width:100%;
+	padding:10%;
+	margin:5%;
+}
+
+/*menu design end here*/
+
+
+/*Right header*/
+#header_right_table{
+	 padding:0.5%;
+	 	text-align:center;
+		width:100%;
+}
+#header_right_table_tr_td_1{
+	padding:10px;
+	display:block;
+	border:2px dashed rgba(0,255,0,1);
+	
+}
+
+#header_right_table_tr_td_2{
+	padding:10px;
+display:block;
+border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_3{
+	padding:10px;
+display:block;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_4{
+		padding:10px;
+		display:block;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+#header_right_table_tr_td_5{
+		padding:10px;
+	display:block;
+	border:2px dashed rgba(0,255,0,1);
+}
+
+
+
+#header_right_table_tr_td_1_a{
+	text-decoration:none;
+	display:block;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_2_a{
+	text-decoration:none;
+	display:block;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_3_a{
+	text-decoration:none;
+	display:block;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_4_a{
+	text-decoration:none;
+	display:block;
+	color:rgba(0,255,0,1);
+}
+#header_right_table_tr_td_5_a{
+	text-decoration:none;
+	display:block;
+	color:rgba(0,255,0,1);
+}
+
+/*header modification end*/
+
+}
+/*---------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------*/

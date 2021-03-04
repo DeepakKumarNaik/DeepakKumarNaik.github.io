@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+
+
+
+<url>
+  <loc>http://deepak.ind.in</loc>
+  <priority>1.0</priority>
+  <changefreq>hourly</changefreq>
+</url>
+
+
+<url>
+  <loc>http://deepak.ind.in/index.html</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+<url>
+  <loc>http://deepak.ind.in/pp</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+<url>
+  <loc>http://deepak.ind.in/pp/index.html</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+<url>
+  <loc>http://deepak.ind.in/tc</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+<url>
+  <loc>http://deepak.ind.in/tc/index.html</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+<url>
+  <loc>http://deepak.ind.in/contact</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+
+
+<url>
+  <loc>http://deepak.ind.in/contact/index.html</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+
+
+
+
+<url>
+  <loc>http://deepak.ind.in/deepak</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+
+
+
+<url>
+  <loc>http://deepak.ind.in/deepak/index.html</loc>
+  <priority>1.0</priority>
+ <changefreq>hourly</changefreq>
+</url>
+
+
+
+
+
+</urlset>

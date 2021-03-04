@@ -1,0 +1,42 @@
+body{
+	
+	background-color:rgba(200,200,255,1);
+}
+
+
+
+#image{
+	text-align:center;
+	margin-top:5%;
+}
+#image_img{
+border-radius:50%;	
+border:5px solid linear-gradient(rgba(255,0,0,1),rgba(0,255,0,1),rgba(0,0,255,1));
+background-image:linear-gradient(rgba(255,0,0,1),rgba(0,255,0,1),rgba(0,0,255,1));
+width:20vw;
+	height:auto;
+}
+
+
+#name{
+	text-align:center;
+	
+}
+#name_h1{
+	 color:rgba(50,100,50,1);
+}
+
+
+#about{
+	text-align:center;
+	
+}
+#about_p1{
+	 color:rgba(100,150,0,1);
+	 font-family:"Courier New", Courier, monospace;
+}
+
+#about_p2{
+	 color:rgba(150,100,0,1);
+	 font-family:"Courier New", Courier, monospace;
+}
