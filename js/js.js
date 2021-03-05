@@ -66,3 +66,101 @@ function CloseNav() {
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
+
+//for show certificate
+
+setTimeout(show_img_1,1000);
+
+function show_img_1() {
+document.getElementById("body_show_img_1").style.display="block";
+document.getElementById("body_show_img_2").style.display="none";
+document.getElementById("body_show_img_3").style.display="none";
+document.getElementById("body_show_img_4").style.display="none";
+document.getElementById("body_show_img_5").style.display="none";
+document.getElementById("body_show_img_6").style.display="none";
+
+setTimeout(show_img_2,1000);
+}
+
+function show_img_2(){
+	
+	
+document.getElementById("body_show_img_1").style.display="none";
+document.getElementById("body_show_img_2").style.display="block";
+document.getElementById("body_show_img_3").style.display="none";
+document.getElementById("body_show_img_4").style.display="none";
+document.getElementById("body_show_img_5").style.display="none";
+document.getElementById("body_show_img_6").style.display="none";
+
+	setTimeout(show_img_3,1000);
+}
+
+
+function show_img_3(){
+	
+	
+document.getElementById("body_show_img_1").style.display="none";
+document.getElementById("body_show_img_2").style.display="none";
+document.getElementById("body_show_img_3").style.display="block";
+document.getElementById("body_show_img_4").style.display="none";
+document.getElementById("body_show_img_5").style.display="none";
+document.getElementById("body_show_img_6").style.display="none";
+
+	setTimeout(show_img_4,1000);
+}
+
+
+
+function show_img_4(){
+	
+	
+document.getElementById("body_show_img_1").style.display="none";
+document.getElementById("body_show_img_2").style.display="none";
+document.getElementById("body_show_img_3").style.display="none";
+document.getElementById("body_show_img_4").style.display="block";
+document.getElementById("body_show_img_5").style.display="none";
+document.getElementById("body_show_img_6").style.display="none";
+
+	setTimeout(show_img_5,1000);
+}
+
+
+function show_img_5(){
+	
+	
+document.getElementById("body_show_img_1").style.display="none";
+document.getElementById("body_show_img_2").style.display="none";
+document.getElementById("body_show_img_3").style.display="none";
+document.getElementById("body_show_img_4").style.display="none";
+document.getElementById("body_show_img_5").style.display="block";
+document.getElementById("body_show_img_6").style.display="none";
+
+	setTimeout(show_img_6,1000);
+}
+
+
+
+function show_img_6(){
+	
+	
+document.getElementById("body_show_img_1").style.display="none";
+document.getElementById("body_show_img_2").style.display="none";
+document.getElementById("body_show_img_3").style.display="none";
+document.getElementById("body_show_img_4").style.display="none";
+document.getElementById("body_show_img_5").style.display="none";
+document.getElementById("body_show_img_6").style.display="block";
+
+	setTimeout(show_img_1,1000);
+}
+
+
+var width=document.documentElement.clientWidth;
+
+for(var i=1;i<=6;i++){
+	
+	document.getElementById("body_show_img_"+i).style.height=(width/4)+"px";
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
