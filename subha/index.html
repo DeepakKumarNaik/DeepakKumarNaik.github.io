@@ -2,6 +2,10 @@
 <html lang="en"  oncontextmenu="return false;">
 <!--HEAD start-->
 <head>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+
 <!--prevent print-->
 <style>
 @media print {
@@ -50,9 +54,17 @@
 <!--BODY Start-->
 
 
-<body onload="myFunction()" oncontextmenu="return false;" 
+<body  
+onload="myFunction()" oncontextmenu="return false;" 
 onkeydown="return false;" onmousedown="return false;"   onselectstart="return false" ondragstart="return false">
 
+<canvas id="c">
+
+</canvas>
+
+<div id="bg-color"></div>
+
+<div id="body">
 
 <div id="image">
 <img id="image_img" src="../image/friend/subha.png"/>
@@ -85,14 +97,9 @@ Hello, Welcome to My Website !</br>
 </div>
 
 
+</div>
 
-
-
-
-
-
-
-
+<script src="js/js.js"></script>
 
 </body>
 <!--BODY end-->
