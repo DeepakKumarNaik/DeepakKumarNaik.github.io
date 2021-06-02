@@ -1,3 +1,44 @@
+
+
+
+var theme_color=document.getElementById('theme-color');
+    var x_t_c=0;
+	var y_t_c=0;
+	var z_t_c=0;
+function change_theme_color(){
+	if(x_t_c>255){
+		x_t_c=0;
+	}
+	if(y_t_c>255){
+		y_t_c=0;
+	}
+	if(z_t_c>255){
+		z_t_c=0;
+	}
+
+	x_t_c=x_t_c+1;
+	y_t_c=y_t_c+2;
+	z_t_c=z_t_c+5;
+	
+theme_color.setAttribute("content","rgba("+x_t_c+","+y_t_c+","+z_t_c+",1)");
+
+}
+
+setInterval(change_theme_color, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animation BG*/
+
 var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
