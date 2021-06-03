@@ -16,9 +16,9 @@
 <!-- style sheet-->
 <link href="style/style.css" rel="stylesheet"/>
 <!--THEMEcolour-->
-<!-- chrome, firefox OS and opera --> <meta name="theme-color" content="rgba(255,0,255,1)"> 
-<!-- windows Phone --> <meta name="msapplication-navbutton-color" content="rgba(255,0,255,1)"> 
-<!-- iOS Safari --> <meta name="apple-mobile-web-app-status-bar-style" content="rgba(255,0,255,1)">
+<!-- chrome, firefox OS and opera --> <meta id="theme-color" name="theme-color" content="rgba(255,0,255,1)"> 
+<!-- windows Phone --> <meta id="theme-color" name="msapplication-navbutton-color" content="rgba(255,0,255,1)"> 
+<!-- iOS Safari --> <meta id="theme-color" name="apple-mobile-web-app-status-bar-style" content="rgba(255,0,255,1)">
  
 <!--RESPONSHIVE initial scale-->
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -50,17 +50,23 @@
 <!--BODY Start-->
 
 
-<body onload="myFunction()" oncontextmenu="return false;" 
+<body 
+onload="myFunction()" oncontextmenu="return false;" 
 onkeydown="return false;" onmousedown="return false;"   onselectstart="return false" ondragstart="return false">
 
 
-<div id="image">
+<canvas id="canvas"></canvas>
+
+
+<div id="body">
+
+<div id="image" >
 <img id="image_img" src="../image/friend/foren.jpg"/>
 </div>
 
 
-<div id="name">
-<h1 id="name_h1"><i>Foren</i></h1>
+<div id="name" >
+<h1 id="name_h1" ><i>Foren</i></h1>
 </div>
 
 <div id="about">
@@ -84,15 +90,13 @@ Hello, Welcome to My Website !</br>
 </p>
 </div>
 
+</div>
 
 
 
 
 
-
-
-
-
+<script src="js/js.js"></script>
 
 </body>
 <!--BODY end-->
