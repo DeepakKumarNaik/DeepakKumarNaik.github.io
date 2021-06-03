@@ -1,6 +1,6 @@
 body{
 	
-	background-color:rgba(200,200,255,1);
+	background-color:rgba(0,255,255,1);
 }
 
 
@@ -39,4 +39,19 @@ width:20vw;
 #about_p2{
 	 color:rgba(150,100,0,1);
 	 font-family:"Courier New", Courier, monospace;
+}
+
+/*Animation BG*/
+#body{
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+
+}
+
+canvas{
+	top:0;
+	left:0;
+	position:absolute;
 }
