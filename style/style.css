@@ -1,0 +1,65 @@
+body{
+	
+	background-color:rgba(0,0,0,1);
+	color:rgba(255,255,255,1);	
+}
+
+/*****************************************************/
+
+
+
+/*******************************************************/
+
+
+#image{
+	text-align:center;
+	margin-top:30px;
+}
+#image_img{
+border-radius:50%;
+background-image:linear-gradient(rgba(255,0,0,1),rgba(0,255,0,1),rgba(0,0,255,1));
+width:100px;
+	height:auto;
+	border-width:5px;
+	border-color:rgba(255,255,0,0.6);
+	border-style:solid;
+}
+
+
+#name{
+	text-align:center;
+	
+}
+#name_h1{
+	font-family:Brush Script MT, Brush Script Std, cursive;
+	 color:rgba(0,255,0,1);
+	 font-size:medium;
+}
+
+
+#about{
+
+font-family:Arnoldboecklin, fantasy;
+	margin:20px;
+}
+#about_p1{
+		text-align:center;
+	 color:rgba(255,150,0,1);
+}
+
+#about_p2{
+	 color:rgba(0,255,255,1);
+	 font-family:Courier New, Courier, monospace;
+}
+
+#body-footer-contact{
+	background-color:rgba(100,100,100,1);
+	padding:10px;
+text-align:center;
+}
+
+#body-footer-contact-table{
+width:100%;
+}
+
+

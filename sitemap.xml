@@ -46,49 +46,4 @@
  <changefreq>hourly</changefreq>
 </url>
 
-
-
-<url>
-  <loc>http://deepak.ind.in/contact</loc>
-  <priority>1.0</priority>
- <changefreq>hourly</changefreq>
-</url>
-
-
-
-
-
-<url>
-  <loc>http://deepak.ind.in/contact/index.html</loc>
-  <priority>1.0</priority>
- <changefreq>hourly</changefreq>
-</url>
-
-
-
-
-
-
-
-<url>
-  <loc>http://deepak.ind.in/deepak</loc>
-  <priority>1.0</priority>
- <changefreq>hourly</changefreq>
-</url>
-
-
-
-
-
-
-<url>
-  <loc>http://deepak.ind.in/deepak/index.html</loc>
-  <priority>1.0</priority>
- <changefreq>hourly</changefreq>
-</url>
-
-
-
-
-
 </urlset>
