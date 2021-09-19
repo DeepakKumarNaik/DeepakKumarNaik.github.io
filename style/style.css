@@ -1,8 +1,17 @@
 body{
-	
+	word-wrap:break-word;
 	background-color:rgba(0,0,0,1);
 	color:rgba(255,255,255,1);	
 }
+
+
+#speaker_img{
+	position:fixed;
+	top:0;
+	left:0;
+	width:20px;
+}
+
 
 /*****************************************************/
 
@@ -19,6 +28,19 @@ body{
 border-radius:50%;
 background-image:linear-gradient(rgba(255,0,0,1),rgba(0,255,0,1),rgba(0,0,255,1));
 width:100px;
+font-size:100px;
+	height:auto;
+	border-width:5px;
+	border-color:rgba(255,255,0,0.6);
+	border-style:solid;
+}
+
+
+#image_emoji{
+border-radius:40%;
+background-image:linear-gradient(rgba(255,0,0,1),rgba(0,255,0,1),rgba(0,0,255,1));
+font-size:100px;
+display:none;
 	height:auto;
 	border-width:5px;
 	border-color:rgba(255,255,0,0.6);
