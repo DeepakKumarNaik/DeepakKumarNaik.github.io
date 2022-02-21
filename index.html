@@ -92,6 +92,13 @@ Proprietary and Confidential   -->
 <body  oncontextmenu="return false;" 
 onkeydown="return false;" onmousedown="return false;"   onselectstart="return false" ondragstart="return false">
 
+<div id="display-error" >
+<h1 style="text-align:center;font-size:xxx-large;">404</h1> 
+<h1 style="text-align:center;" onclick="display_content();" id="indicator">Not Found</h1>
+<p style="text-align:center;">The resource requested could not be found on this server</p>
+</div>
+
+<div id="display">
 
 <div id="speaker">
 <span id="speaker_img"  onclick="text_to_speech();">&#128264;</span>
@@ -242,6 +249,21 @@ And many more.
 <script src="js/js.js"></script>
 
 <script>
+var display_error=document.getElementById('display-error');
+var display_indicator=document.getElementById('indicator');
+var display=document.getElementById('display');
+display.style.display='none';
+
+function display_content(){
+display_indicator.style.color="rgba(200,255,200,1)";
+setTimeout(function_display_content, 30000);
+}
+function function_display_content(){
+display.style.display='block';
+display_error.style.display='none';
+}
+
+
 
 function email_alert(){
 
@@ -250,6 +272,8 @@ alert("This is temporary email, may be work !");
 }
 
 </script>
+
+</div>
 
 </body>
 <!--BODY end-->
