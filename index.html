@@ -90,15 +90,18 @@ Proprietary and Confidential   -->
 
 
 <body  oncontextmenu="return false;" 
-onkeydown="return false;" onmousedown="return false;"   onselectstart="return false" ondragstart="return false">
+onkeydown="return true;" onmousedown="return true;"   onselectstart="return false" ondragstart="return false">
 
 <div id="display-error" >
-<h1 style="text-align:center;font-size:xxx-large;">404</h1> 
-<h1 style="text-align:center;" onclick="display_content();" id="indicator">Not Found</h1>
-<p style="text-align:center;">The resource requested could not be found on this server</p>
+<h1 style="text-align:center;font-size:xxx-large;">Wit Test</h1> 
+<h1 style="text-align:center;" >Enter Two Zero Three Zero</h1>
+<form style="text-align:center;" >
+<input type="text" placeholder="Enter 2030" style="width:80%;height:50px;font-size:large;" id="get-result" onkeyup="check_result();" />
+</form>
+<div style="text-align:center;font-size:x-large;color:rgba(255,0,0,1);" id="show-result"></div>
 </div>
 
-<div id="display">
+<div id="display" onkeydown="return false;" onmousedown="return false;" >
 
 <div id="speaker">
 <span id="speaker_img"  onclick="text_to_speech();">&#128264;</span>
@@ -141,7 +144,7 @@ Hello, Welcome to My Website !</br>
 
 </br>
 <br/>
-<i><b> EDUCATION :</b> Data Updated Till 2023 - <br/><br/>
+<i><b> EDUCATION :</b> Data Updated Till 2021 - <br/><br/>
 <span style="color:rgba(255,255,0,1);font-size:large;font-family: serif;"> 
 BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span> (2016-2019), <br/> 
  MSc (Master of Science) in <span style="color:rgba(0,255,0,1);">Computer Science</span> (2019-2021), <br/>
@@ -254,21 +257,31 @@ var display_indicator=document.getElementById('indicator');
 var display=document.getElementById('display');
 display.style.display='none';
 
-function display_content(){
-display_indicator.style.color="rgba(200,255,200,1)";
-setTimeout(function_display_content, 30000);
-}
-function function_display_content(){
+//////////////////////////////////////////////////////////////////////
+
+function check_result(){
+
+var get_result=document.getElementById("get-result");
+var show_result=document.getElementById("show-result");
+
+var input_result=get_result.value.trim();
+if(input_result=="2Zero000"){
 display.style.display='block';
 display_error.style.display='none';
+get_result.value="";
+//clearInterval(myInterval); 
+}
+else{
+show_result.innerHTML="Wrong Input";
+
 }
 
+}
 
+//var myInterval= setInterval(check_result, 500);
 
 function email_alert(){
-
 alert("This is temporary email, may be work !");
-
 }
 
 </script>
