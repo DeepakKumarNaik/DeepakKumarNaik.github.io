@@ -55,7 +55,7 @@ display:none;
 	
 }
 #name_h1{
-	font-family:Brush Script MT, Brush Script Std, cursive;
+	font-family:Papyrus, fantasy;
 	 color:rgba(0,255,0,1);
 	 font-size:medium;
 }
@@ -72,7 +72,7 @@ font-family:Arnoldboecklin, fantasy;
 }
 
 #about_p2{
-	 color:rgba(0,255,255,1);
+	 color:rgba(0,100,100,1);
 	 font-family:Courier New, Courier, monospace;
 }
 
