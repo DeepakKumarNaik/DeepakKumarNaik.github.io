@@ -92,15 +92,20 @@ Proprietary and Confidential   -->
 <body  oncontextmenu="return false;" 
 onkeydown="return true;" onmousedown="return true;"   onselectstart="return false" ondragstart="return false">
 
-<div id="display-error" >
-<!--<h1 style="text-align:center;font-size:xxx-large;">Test</h1> -->
-
-<h1 style="text-align:center;" >Enter Two Zero Three Zero</h1>
-<form style="text-align:center;" >
-<input type="text" placeholder="Enter 2030" style="width:80%;height:50px;font-size:large;" id="get-result" onkeyup="check_result();" />
+<div id="display-security" >
+<h1 style="text-align:center;" >Solve it !</h1>
+<form style="text-align:center;margin-top:25px;" id="body_body_form" onsubmit="return false;">
+<input type="text" disabled style="width:150px;height:50px;font-size:large;color:rgba(0,0,0,1);padding:5px;" 
+id="body_body_form_security" name="security-code-display"  />
+ <input type="text" style="width:200px;height:50px;font-size:large;text-align:center;padding:5px;" 
+ id="body_body_form_security_code"  name="security-code" required="required"  onkeyup="check_result();"/>
 </form>
-<div style="text-align:center;font-size:x-large;color:rgba(255,0,0,1);" id="show-result"></div>
+<div style="text-align:center;font-size:x-large;color:rgba(255,0,0,1);margin-top:25px;" id="show-result"></div>
 </div>
+
+
+
+<!------------------------Display----------------------------------------->
 
 <div id="display" onkeydown="return false;" onmousedown="return false;" style="display:none;">
 
@@ -126,7 +131,7 @@ onkeydown="return true;" onmousedown="return true;"   onselectstart="return fals
 <div id="about">
 <p id="about_p1">
 Hello, Welcome to My Website !</br>
-<b><i style="font-size:x-small;">A Science Student !</i></b> </br>
+<b><i style="font-size:x-small;color:rgba(255,255,0,1);">A Science Student !</i></b> </br>
 
 </p>
 <hr>
@@ -147,7 +152,7 @@ Hello, Welcome to My Website !</br>
 </br>
 <br/>
 <i><b> EDUCATION :</b> Data Updated Till 2021 - <br/><br/>
-<span style="color:rgba(255,255,0,1);font-size:large;font-family: serif;"> 
+<span style="color:rgba(255,255,0,1);font-size:large;font-family: Times, Times New Roman, serif ;"> 
 BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span> (2016-2019), <br/> 
  MSc (Master of Science) in <span style="color:rgba(0,255,0,1);">Computer Science</span> (2019-2021), <br/>
  </span>
@@ -155,9 +160,9 @@ BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span>
  <br/>
  
  <i>Others : </i><br/><br/>
- <span style="color:rgba(0,255,0,1);">PGDCA</span> (Post Graduate Diploma In Computer Application) [Offline, Private], <br/><br/>
+ <span style="color:rgba(0,150,0,1);">PGDCA</span> (Post Graduate Diploma In Computer Application) [Offline, Private], <br/><br/>
  
- Certificate Course on <span style="color:rgba(0,255,0,1);">PFA</span> (Psychological First Aid) [Online, Johns Hopkins University, USA] , 05-03-2020, coursera.org/verify/N8AG94Y4AAPF <br/><br/>
+ Certificate Course on <span style="color:rgba(0,150,0,1);">PFA</span> (Psychological First Aid) [Online, Johns Hopkins University, USA] , 05-03-2020, coursera.org/verify/N8AG94Y4AAPF <br/><br/>
  
  One-Week Online Lecture Series on "Trends in Artificial Intelligence and Machine Learning" [Online, 16-07-2020 - 21-07-2020, Department of 
  Computer Application, North Orissa University, Baripada, Odisha, India] <br/><br/>
@@ -200,8 +205,12 @@ And many more.
 </br></br>
 
 <i>
-<b>NATIONALITY :</b> Indian
+<b>NATIONALITY :</b> 
+<span style="color:rgba(255,150,0,1);">In</span><!--
+--><span style="color:rgba(255,255,255,1);">di</span><!--
+--><span style="color:rgba(0,255,0,1);">an</span>
 </i>
+
 <br/>
 <br/>
 <i>
@@ -253,33 +262,72 @@ And many more.
 <script src="js/js.js"></script>
 
 <script>
-var display_error=document.getElementById('display-error');
-var display_indicator=document.getElementById('indicator');
+var display_security=document.getElementById('display-security');
+display_security.style.display="block";
 var display=document.getElementById('display');
 display.style.display='none';
 
-//////////////////////////////////////////////////////////////////////
+//////////////////////////////*****************************///////////////////////////*******/
 
-function check_result(){
 
-var get_result=document.getElementById("get-result");
-var show_result=document.getElementById("show-result");
 
-var input_result=get_result.value.trim();
-if(input_result=="0030"){
+  var x_value = Math.floor((Math.random() * 10) + 1);
+    var y_value = Math.floor((Math.random() * 10) + 1);
+	    var z_symbol = Math.floor((Math.random() * 3) + 1);
+		
+		if(z_symbol==1){
+			var result=x_value+(y_value*x_value);
+			var x_value_string=x_value.toString();
+			var y_value_string=y_value.toString();
+			window.onload=function(){
+			var result_string=x_value_string+"+"+y_value_string+"x"+x_value_string+"   =";
+			  document.getElementById("body_body_form_security").value = result_string;
+			  }
+		}
+		else if(z_symbol==2){
+			var result=x_value-(y_value+x_value);
+			var x_value_string=x_value.toString();
+			var y_value_string=y_value.toString();
+			window.onload=function(){
+			var result_string=x_value_string+"-"+y_value_string+"+"+x_value_string+"   =";
+			  document.getElementById("body_body_form_security").value = result_string;
+			  }
+		}
+		
+			else if(z_symbol==3){
+			var result=(x_value*y_value)-x_value;
+			var x_value_string=x_value.toString();
+			var y_value_string=y_value.toString();
+			window.onload=function(){
+			var result_string=x_value_string+"x"+y_value_string+"-"+x_value_string+"   =";
+			  document.getElementById("body_body_form_security").value = result_string;
+			  }
+		}
+		
+		
+
+  //////////////////////////////////////////////********************************************/
+  
+  function check_result(){
+      var submit_result=document.getElementById("body_body_form_security_code");
+    if (submit_result.value.trim()!=result) {
+document.getElementById("show-result").innerHTML="Wrong !";
+document.getElementById("show-result").style.color="rgba(255,0,0,1)";
+
+    }
+	if (submit_result.value.trim()==result) {
+document.getElementById("show-result").innerHTML="Correct !";
+document.getElementById("show-result").style.color="rgba(0,255,0,1)";
+
+var display_security=document.getElementById('display-security');
+display_security.style.display="none";
+var display=document.getElementById('display');
 display.style.display='block';
-display_error.style.display='none';
-get_result.value="";
-//clearInterval(myInterval); 
-}
-else{
-show_result.innerHTML='Wrong Input';
 
-}
+    }
+  }
 
-}
-
-//var myInterval= setInterval(check_result, 500);
+/*////////////////////////////////////////*/
 
 function email_alert(){
 alert("This is temporary email, may be work !");
