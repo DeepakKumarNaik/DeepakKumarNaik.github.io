@@ -1,6 +1,7 @@
 body{
 	word-wrap:break-word;
-
+background-image:linear-gradient(rgba(100,0,50,1),rgba(50,50,150,1),rgba(0,0,0,1),rgba(0,0,200,1));
+color:rgba(255,255,255,1);
 }
 
 
@@ -70,7 +71,7 @@ font-family:Arnoldboecklin, fantasy;
 }
 
 #about_p2{
-	 color:rgba(0,150,150,1);
+	 color:rgba(255,255,255,1);
 	 font-family:Courier New, Courier, monospace;
 }
 
