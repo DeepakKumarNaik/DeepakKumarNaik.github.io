@@ -91,7 +91,7 @@ Proprietary and Confidential   -->
 
 <body  oncontextmenu="return false;" 
 onkeydown="return true;" onmousedown="return true;"   onselectstart="return false" ondragstart="return false">
-
+<!--
 <div id="display-security" >
 <h1 style="text-align:center;" >Solve it !</h1>
 <form style="text-align:center;margin-top:25px;" id="body_body_form" onsubmit="return false;">
@@ -104,12 +104,12 @@ id="body_body_form_security" name="security-code-display"  />
 </form>
 <div style="text-align:center;font-size:x-large;color:rgba(255,0,0,1);margin-top:25px;" id="show-result"></div>
 </div>
-
+-->
 
 
 <!------------------------Display----------------------------------------->
 
-<div id="display" onkeydown="return false;" onmousedown="return false;" style="display:none;">
+<div id="display" onkeydown="return false;" onmousedown="return false;" style="display:block;">
 
 <div id="speaker">
 <span id="speaker_img"  onclick="text_to_speech();">&#128264;</span>
@@ -133,7 +133,7 @@ id="body_body_form_security" name="security-code-display"  />
 <div id="about">
 <p id="about_p1">
 Hello, Welcome to My Website</br>
-<b><i style="font-size:x-small;color:rgba(255,255,0,1);">A Science Student</i></b> </br>
+<b><i style="font-size:x-small;color:rgba(0,0,0,1);">A Science Student</i></b> </br>
 
 </p>
 <hr>
@@ -249,7 +249,7 @@ And many more.
 <img  style="width:20px" src="image/general/email.png"  alt="SocialLink" target="_blank" onclick="email_alert();"/></a>
 </td>
 <td>
-<a href="https://twitter.com/#">
+<a href="https://twitter.com/KumarDeepakNaik">
 <img  style="width:20px" src="image/general/twitter.png"  alt="SocialLink" target="_blank"/></a>
 </td>
 <td>
@@ -276,6 +276,7 @@ And many more.
 <script src="js/js.js"></script>
 
 <script>
+/*
 var display_security=document.getElementById('display-security');
 display_security.style.display="block";
 var display=document.getElementById('display');
@@ -283,7 +284,7 @@ display.style.display='none';
 
 //////////////////////////////*****************************///////////////////////////*******/
 
-
+/*
 
   var x_value = Math.floor((Math.random() * 10) + 1);
     var y_value = Math.floor((Math.random() * 10) + 1);
@@ -333,7 +334,7 @@ display.style.display='none';
 
   //////////////////////////////////////////////********************************************/
   
-  function check_result(){
+ /* function check_result(){
       var submit_result=document.getElementById("body_body_form_security_code");
     if (submit_result.value.trim()!=result) {
 document.getElementById("show-result").innerHTML="Wrong !";
@@ -358,7 +359,7 @@ display.style.display='block';
   }
 
 /*////////////////////////////////////////*/
-
+/*
 function email_alert(){
 alert("This is temporary email, may be work !");
 }
