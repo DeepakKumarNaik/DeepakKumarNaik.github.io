@@ -1,6 +1,6 @@
 body{
 	word-wrap:break-word;
-background-image:linear-gradient(rgba(100,0,50,1),rgba(50,50,150,1),rgba(0,0,0,1),rgba(0,0,200,1));
+background-image:linear-gradient(rgba(200,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,200,1));
 color:rgba(255,255,255,1);
 }
 
@@ -49,11 +49,8 @@ display:none;
 }
 
 
-#name{
-	text-align:center;
-	
-}
 #name_h1{
+	text-align:center;
 	font-family:Papyrus, fantasy;
 	 color:rgba(0,200,255,1);
 	 font-size:medium;
