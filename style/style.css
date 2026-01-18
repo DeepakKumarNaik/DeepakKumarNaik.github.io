@@ -1,6 +1,6 @@
 body{
 	word-wrap:break-word;
-background-image:linear-gradient(rgba(200,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,200,1));
+background-image:linear-gradient(rgba(255,0,0,1),rgba(0,0,50,1),rgba(0,0,0,1),rgba(0,0,200,1));
 color:rgba(255,255,255,1);
 }
 
