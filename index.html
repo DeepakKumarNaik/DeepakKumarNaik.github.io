@@ -1,30 +1,13 @@
-<!Doctype html>
-<html lang="en"  oncontextmenu="return false;">
-
+<!DOCTYPE html>
+<html lang="en">
 <!--  License : Copyright (C) - All Rights Reserved | Unauthorized copying of this file, via any medium is strictly prohibited | 
 Proprietary and Confidential   -->
 
-
-<!--HEAD start-->
 <head>
 
-
-<!--prevent print-->
-
-<style>
-
-@media print {
-    html, body {
-       display: none;
-    }
-}
-
-   html {
-            user-select: none;
-        }
-</style>
-
- <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Deepak | Personal Portfolio</title>
 
 <!--PRELOAD files -->
  <!--icon-->
@@ -32,7 +15,7 @@ Proprietary and Confidential   -->
  
 
 <!-- style sheet-->
-<link href="style/style.css" rel="stylesheet"/>
+<!--<link href="style/style.css" rel="stylesheet"/>-->
 
 <!--THEMEcolour-->
 <!-- chrome, firefox OS and opera --> <meta id="theme-color" name="theme-color" content="rgba(0,0,0,1)"> 
@@ -41,12 +24,7 @@ Proprietary and Confidential   -->
 
     
 <!--RESPONSHIVE initial scale-->
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-
-
-
-<!--TITLE-->
-<title>Deepak</title>
+<!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">-->
 
 
 <!--META DATA with meta tag-->
@@ -72,116 +50,1105 @@ Proprietary and Confidential   -->
       <meta property="og:type" content="website" />
       
       
- 
 
+  
+  <style>
+  <!--prevent print-->
+  @media print {
+    html, body {
+       display: none;
+    }
+}
+
+   html {
+            user-select: none;
+        }
+  
+    :root {
+      --bg-deep: #010206;
+      --glass-bg: rgba(8, 13, 26, 0.68);
+      --glass-hover: rgba(14, 22, 42, 0.85);
+      --border-line: rgba(56, 189, 248, 0.22);
+      --border-active: rgba(56, 189, 248, 0.65);
+      --cyan: #38bdf8;
+      --indigo: #818cf8;
+      --amber: #fbbf24;
+      --emerald: #34d399;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Full-Viewport 3D Universe Canvas */
+    #cosmos-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Navigation Bar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(1, 2, 6, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 3D Volumetric Atom Logo */
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .atom-3d-logo {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.35));
+      transition: transform 0.35s ease;
+    }
+
+    .logo-link:hover .atom-3d-logo {
+      transform: scale(1.08) rotate(8deg);
+    }
+
+    /* 3D Electron Orbital Animations */
+    .electron-track-1 {
+      stroke-dasharray: 220;
+      animation: orbit-flow-1 3.6s linear infinite;
+    }
+
+    .electron-track-2 {
+      stroke-dasharray: 220;
+      animation: orbit-flow-2 4.4s linear infinite;
+    }
+
+    .electron-track-3 {
+      stroke-dasharray: 220;
+      animation: orbit-flow-3 5.2s linear infinite;
+    }
+
+    .nucleus-3d-cluster {
+      transform-origin: 50px 50px;
+      animation: nucleus-breathe 3.2s ease-in-out infinite;
+    }
+
+    @keyframes orbit-flow-1 {
+      0% { stroke-dashoffset: 440; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes orbit-flow-2 {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 440; }
+    }
+
+    @keyframes orbit-flow-3 {
+      0% { stroke-dashoffset: 440; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes nucleus-breathe {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.08) rotate(12deg); }
+    }
+
+    .logo-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-domain {
+      font-family: var(--font-mono);
+      font-size: 1.12rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      background: linear-gradient(90deg, #ffffff, var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-tag {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      color: var(--text-secondary);
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    /* Nav Links with 3D Scientific Icons */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.4px;
+      transition: all 0.25s ease;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+
+    .nav-menu a:hover {
+      color: var(--text-primary);
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .menu-3d-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    /* Animated 3D Menu Icon Keyframes */
+    /* 1. DNA Helix Wave */
+    .dna-strand {
+      transform-origin: 12px 12px;
+      animation: dna-twist 4s ease-in-out infinite;
+    }
+    .dna-rung {
+      animation: dna-pulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes dna-twist {
+      0%, 100% { transform: scaleX(1); }
+      50% { transform: scaleX(0.65); }
+    }
+    @keyframes dna-pulse {
+      0% { opacity: 0.45; }
+      100% { opacity: 1; }
+    }
+
+    /* 2. Quantum Spin */
+    .quantum-ring-a {
+      transform-origin: 12px 12px;
+      animation: q-spin-cw 4s linear infinite;
+    }
+    .quantum-ring-b {
+      transform-origin: 12px 12px;
+      animation: q-spin-ccw 5s linear infinite;
+    }
+    @keyframes q-spin-cw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes q-spin-ccw {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    /* 3. Black Hole Accretion Disk */
+    .bh-accretion {
+      transform-origin: 12px 12px;
+      animation: bh-swirl 6s linear infinite;
+    }
+    @keyframes bh-swirl {
+      from { transform: rotate(-18deg) scale(1); }
+      50% { transform: rotate(162deg) scale(1.06); }
+      to { transform: rotate(342deg) scale(1); }
+    }
+
+    /* 4. Artificial Intelligence Neural Node */
+    .ai-synapse {
+      animation: ai-fire 2.2s ease-in-out infinite;
+    }
+    .ai-core {
+      transform-origin: 12px 12px;
+      animation: ai-glow 1.8s ease-in-out infinite alternate;
+    }
+    @keyframes ai-fire {
+      0%, 100% { stroke-opacity: 0.35; }
+      50% { stroke-opacity: 1; }
+    }
+    @keyframes ai-glow {
+      from { transform: scale(0.9); }
+      to { transform: scale(1.18); }
+    }
+
+    .mobile-btn {
+      display: none;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--border-line);
+      color: var(--cyan);
+      padding: 0.45rem 0.75rem;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    /* Layout Container */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 6.5rem 0 4rem;
+    }
+
+    /* Hero Portfolio Section */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      align-items: center;
+      gap: 3rem;
+      padding-top: 6rem;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan);
+      margin-bottom: 1.5rem;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 .gradient-name {
+      background: linear-gradient(120deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-bio {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .btn-glow {
+      background: linear-gradient(135deg, var(--cyan), var(--indigo));
+      color: #020617;
+      border: none;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
+    }
+
+    .btn-glass {
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-glass:hover {
+      border-color: var(--cyan);
+      background: var(--glass-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Interactive Researcher Dossier Card (Hero Right) */
+    .dossier-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-line);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.3s ease;
+    }
+
+    .dossier-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--indigo), transparent);
+    }
+
+    .dossier-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .dossier-id {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--cyan);
+    }
+
+    .dossier-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .dossier-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .dossier-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+    }
+
+    .dossier-key {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+
+    .dossier-val {
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: right;
+    }
+
+    /* Section Headings */
+    .section-head {
+      margin-bottom: 2.75rem;
+    }
+
+    .section-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--cyan);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+    }
+
+    /* Portfolio Filter Tabs */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      background: var(--glass-bg);
+      color: var(--text-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: rgba(56, 189, 248, 0.16);
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    /* Responsive Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .portfolio-card {
+      background: var(--glass-bg);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: 1.85rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-active);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.12);
+    }
+
+    .portfolio-card.hidden {
+      display: none;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .card-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--indigo);
+    }
+
+    .card-link-icon {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .portfolio-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .portfolio-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 5px;
+      background: rgba(129, 140, 248, 0.12);
+      color: #c7d2fe;
+      border: 1px solid rgba(129, 140, 248, 0.25);
+    }
+
+    /* Timeline / Experience Section */
+    .timeline {
+      border-left: 2px solid rgba(56, 189, 248, 0.25);
+      margin-left: 0.75rem;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: var(--glass-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.45rem;
+      top: 1.65rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--cyan);
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+    }
+
+    /* Contact Section */
+    .contact-panel {
+      background: linear-gradient(145deg, rgba(10, 18, 36, 0.82), rgba(5, 9, 20, 0.88));
+      border: 1px solid var(--border-line);
+      border-radius: 18px;
+      padding: 3.25rem 2rem;
+      text-align: center;
+      backdrop-filter: blur(16px);
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-panel p {
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.25rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(1, 2, 6, 0.85);
+    }
+
+    /* Mobile & Tablet Breakpoints */
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+        padding-top: 6.5rem;
+      }
+
+      .nav-menu {
+        gap: 0.75rem;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .mobile-btn {
+        display: block;
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(2, 4, 12, 0.96);
+        border-bottom: 1px solid var(--border-line);
+        padding: 1.25rem 1.5rem;
+        gap: 0.85rem;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-menu a {
+        width: 100%;
+        padding: 0.55rem 0.75rem;
+      }
+
+      section {
+        padding: 5rem 0 3rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-<!--HEAD END-->
 
+<!----------------------------------------------------------BODY START-------------------------------------->
 
-
-
-
-
-
-
-
-
-<!--BODY Start-->
-
-
-<body  oncontextmenu="return false;" 
+<body oncontextmenu="return false;" 
 onkeydown="return true;" onmousedown="return true;"   onselectstart="return false" ondragstart="return false">
+
+  <!-- Realistic 3D Universe Background -->
+  <canvas id="cosmos-canvas"></canvas>
+
+  <!-- Navigation with Volumetric 3D Atom Logo & Animated 3D Scientific Menu Icons -->
+  <header>
+    <div class="nav-wrap">
+      <a href="#about" class="logo-link" aria-label="Deepak Portfolio Home">
+        <!-- True 3D-Shaded Volumetric Atom SVG Logo -->
+        <svg class="atom-3d-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Ambient Quantum Aura -->
+            <radialGradient id="atomHalo" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45" />
+              <stop offset="55%" stop-color="#818cf8" stop-opacity="0.14" />
+              <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+            </radialGradient>
+
+            <!-- 3D Proton Sphere (Cyan-Blue Specular Shading) -->
+            <radialGradient id="proton3D" cx="32%" cy="28%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="28%" stop-color="#38bdf8" />
+              <stop offset="75%" stop-color="#0369a1" />
+              <stop offset="100%" stop-color="#082f49" />
+            </radialGradient>
+
+            <!-- 3D Neutron Sphere (Violet-Indigo Specular Shading) -->
+            <radialGradient id="neutron3D" cx="32%" cy="28%" r="70%">
+              <stop offset="0%" stop-color="#f5d0fe" />
+              <stop offset="30%" stop-color="#a855f7" />
+              <stop offset="78%" stop-color="#581c87" />
+              <stop offset="100%" stop-color="#2e1065" />
+            </radialGradient>
+
+            <!-- 3D Golden Electron Sphere -->
+            <radialGradient id="electronGold3D" cx="30%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="35%" stop-color="#fde047" />
+              <stop offset="100%" stop-color="#b45309" />
+            </radialGradient>
+
+            <!-- 3D Cyan Electron Sphere -->
+            <radialGradient id="electronCyan3D" cx="30%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="35%" stop-color="#67e8f9" />
+              <stop offset="100%" stop-color="#0e7490" />
+            </radialGradient>
+
+            <!-- 3D Orbital Rim Gradients (Depth Illusion: Bright Front, Dim Back) -->
+            <linearGradient id="orbitDepth1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.95" />
+              <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#818cf8" stop-opacity="0.95" />
+            </linearGradient>
+
+            <linearGradient id="orbitDepth2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.95" />
+              <stop offset="50%" stop-color="#818cf8" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.95" />
+            </linearGradient>
+          </defs>
+
+          <!-- Soft Background Glow -->
+          <circle cx="50" cy="50" r="48" fill="url(#atomHalo)" />
+
+          <!-- Back-Layer Orbital Rings (Depth Behind Nucleus) -->
+          <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(30 50 50)" stroke="url(#orbitDepth1)" stroke-width="2.2" />
+          <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(-30 50 50)" stroke="url(#orbitDepth2)" stroke-width="2.2" />
+          <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(90 50 50)" stroke="url(#orbitDepth1)" stroke-width="2.2" />
+
+          <!-- Moving Luminous Electron Energy Streaks -->
+          <ellipse class="electron-track-1" cx="50" cy="50" rx="42" ry="15" transform="rotate(30 50 50)" stroke="#7dd3fc" stroke-width="2.8" stroke-linecap="round" />
+          <ellipse class="electron-track-2" cx="50" cy="50" rx="42" ry="15" transform="rotate(-30 50 50)" stroke="#e879f9" stroke-width="2.8" stroke-linecap="round" />
+          <ellipse class="electron-track-3" cx="50" cy="50" rx="42" ry="15" transform="rotate(90 50 50)" stroke="#fde047" stroke-width="2.8" stroke-linecap="round" />
+
+          <!-- 3D Clustered Proton/Neutron Nucleus -->
+          <g class="nucleus-3d-cluster">
+            <!-- Rear Nucleons -->
+            <circle cx="45" cy="45" r="6.5" fill="url(#neutron3D)" />
+            <circle cx="55" cy="46" r="6.5" fill="url(#proton3D)" />
+            <circle cx="46" cy="55" r="6.5" fill="url(#proton3D)" />
+            <circle cx="54" cy="54" r="6.5" fill="url(#neutron3D)" />
+            <!-- Front Center Nucleons (3D Overlap) -->
+            <circle cx="48" cy="49" r="7.2" fill="url(#proton3D)" />
+            <circle cx="53" cy="51" r="6.8" fill="url(#neutron3D)" />
+            <circle cx="50" cy="50" r="6.2" fill="url(#proton3D)" />
+          </g>
+
+          <!-- 3D Shaded Orbiting Electrons -->
+          <circle cx="85" cy="70" r="4.2" fill="url(#electronCyan3D)">
+            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="15" cy="70" r="4.2" fill="url(#electronGold3D)">
+            <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="6.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="50" cy="8" r="3.8" fill="url(#electronCyan3D)">
+            <animateTransform attributeName="transform" type="rotate" from="120 50 50" to="480 50 50" dur="4.2s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+
+        <div class="logo-meta">
+          <span class="logo-domain">DEEPAK</span>
+          <span class="logo-tag">Science Student</span>
+        </div>
+      </a>
+<!----------------------------------------------------MENU-------------------------------------------------->
+      <button class="mobile-btn" id="mobile-btn" aria-label="Open Menu">MENU</button>
+
+      <!-- Navigation Menu with Animated 3D DNA, Quantum, Black Hole & AI Icons -->
+      <ul class="nav-menu" id="nav-menu">
+        <!-- 1. DNA 3D Icon -->
+        <li>
+          <a href="#about">
+            <svg class="menu-3d-icon" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <radialGradient id="dnaNode1" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="45%" stop-color="#38bdf8" />
+                  <stop offset="100%" stop-color="#0369a1" />
+                </radialGradient>
+                <radialGradient id="dnaNode2" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#f5d0fe" />
+                  <stop offset="45%" stop-color="#a855f7" />
+                  <stop offset="100%" stop-color="#581c87" />
+                </radialGradient>
+              </defs>
+              <g class="dna-strand">
+                <!-- Base Pair Rungs -->
+                <line class="dna-rung" x1="7" y1="5" x2="17" y2="5" stroke="#7dd3fc" stroke-width="1.3" />
+                <line class="dna-rung" x1="9" y1="9" x2="15" y2="9" stroke="#c084fc" stroke-width="1.3" />
+                <line class="dna-rung" x1="9" y1="15" x2="15" y2="15" stroke="#7dd3fc" stroke-width="1.3" />
+                <line class="dna-rung" x1="7" y1="19" x2="17" y2="19" stroke="#c084fc" stroke-width="1.3" />
+                <!-- Helical Ribbons -->
+                <path d="M6 3C6 8 18 10 18 15C18 18 16 20 15 21" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M18 3C18 8 6 10 6 15C6 18 8 20 9 21" stroke="#a855f7" stroke-width="1.8" stroke-linecap="round" />
+                <!-- 3D Shaded Spheres -->
+                <circle cx="6.5" cy="5" r="2.1" fill="url(#dnaNode1)" />
+                <circle cx="17.5" cy="5" r="2.1" fill="url(#dnaNode2)" />
+                <circle cx="17.5" cy="15" r="2.1" fill="url(#dnaNode1)" />
+                <circle cx="6.5" cy="15" r="2.1" fill="url(#dnaNode2)" />
+              </g>
+            </svg>
+            <span>About</span>
+          </a>
+        </li>
+
+        <!-- 2. Quantum 3D Icon -->
+        <li>
+          <a href="#journey">
+            <svg class="menu-3d-icon" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <radialGradient id="qCore3D" cx="35%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="40%" stop-color="#34d399" />
+                  <stop offset="100%" stop-color="#065f46" />
+                </radialGradient>
+              </defs>
+              <g class="quantum-ring-a">
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(25 12 12)" stroke="#34d399" stroke-width="1.4" />
+                <circle cx="20" cy="15" r="1.7" fill="#6ee7b7" />
+              </g>
+              <g class="quantum-ring-b">
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)" stroke="#38bdf8" stroke-width="1.4" />
+                <circle cx="5" cy="6" r="1.7" fill="#7dd3fc" />
+              </g>
+              <circle cx="12" cy="12" r="3.6" fill="url(#qCore3D)" />
+            </svg>
+            <span>Education</span>
+          </a>
+        </li>
+
+        <!-- 3. Black Hole 3D Icon -->
+        <li>
+          <a href="#projects">
+            <svg class="menu-3d-icon" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <radialGradient id="bhLensing" cx="50%" cy="50%" r="50%">
+                  <stop offset="45%" stop-color="#000000" />
+                  <stop offset="68%" stop-color="#f59e0b" />
+                  <stop offset="85%" stop-color="#ea580c" stop-opacity="0.6" />
+                  <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="accretionGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+                  <stop offset="0%" stop-color="#fde047" />
+                  <stop offset="50%" stop-color="#f97316" />
+                  <stop offset="100%" stop-color="#a855f7" />
+                </linearGradient>
+              </defs>
+              <!-- Gravitational Lensing Halo -->
+              <circle cx="12" cy="12" r="10.5" fill="url(#bhLensing)" />
+              <!-- Swirling Relativistic Accretion Disk -->
+              <g class="bh-accretion">
+                <ellipse cx="12" cy="12" rx="11" ry="3.4" stroke="url(#accretionGrad)" stroke-width="2" />
+              </g>
+              <!-- Event Horizon Singularity -->
+              <circle cx="12" cy="12" r="4.6" fill="#02040a" stroke="#fbbf24" stroke-width="0.9" />
+            </svg>
+            <span>Past Work</span>
+          </a>
+        </li>
+
+        <!-- 4. Artificial Intelligence 3D Icon -->
+        <li>
+          <a href="#contact">
+            <svg class="menu-3d-icon" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <radialGradient id="aiBrain3D" cx="35%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="40%" stop-color="#818cf8" />
+                  <stop offset="100%" stop-color="#312e81" />
+                </radialGradient>
+              </defs>
+              <!-- 3D Neural Lattice Cube/Octahedron -->
+              <g class="ai-synapse" stroke="#38bdf8" stroke-width="1.2">
+                <polygon points="12,2 21,7 21,17 12,22 3,17 3,7" fill="rgba(56,189,248,0.08)" />
+                <line x1="12" y1="2" x2="12" y2="12" />
+                <line x1="21" y1="7" x2="12" y2="12" />
+                <line x1="21" y1="17" x2="12" y2="12" />
+                <line x1="12" y1="22" x2="12" y2="12" />
+                <line x1="3" y1="17" x2="12" y2="12" />
+                <line x1="3" y1="7" x2="12" y2="12" />
+              </g>
+              <!-- Outer Synaptic Nodes -->
+              <circle cx="12" cy="2" r="1.5" fill="#38bdf8" />
+              <circle cx="21" cy="7" r="1.5" fill="#a855f7" />
+              <circle cx="21" cy="17" r="1.5" fill="#38bdf8" />
+              <circle cx="12" cy="22" r="1.5" fill="#a855f7" />
+              <circle cx="3" cy="17" r="1.5" fill="#38bdf8" />
+              <circle cx="3" cy="7" r="1.5" fill="#a855f7" />
+              <!-- Central 3D AI Core -->
+              <circle class="ai-core" cx="12" cy="12" r="3.4" fill="url(#aiBrain3D)" />
+            </svg>
+            <span>Hobby, Skill & Aim</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+<!-------------------------------------------------------MAIN PAGE-------------------------------------------->
+  <main>
+    <!-- Hero / Personal Introduction -->
+    <section class="hero" id="about">
+      <div>
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span> [ Last Update : 2024 ]</span>
+        </div>
+
+        <h1 style="font-size:large;">
+          Hello, I'm <span class="gradient-name">Deepak</span>.<br />
+          architecting systems &amp; converting Ideas into Reality.
+        </h1>
+
+        <p class="hero-bio">
+          Welcome to my personal portfolio website. I research, design and innovate new prototypes, systems and scientific tools, driven by curiosity.
+        </p>
+
 <!--
-<div id="display-security" >
-<h1 style="text-align:center;" >Solve it !</h1>
-<form style="text-align:center;margin-top:25px;" id="body_body_form" onsubmit="return false;">
-<input type="text" disabled style="width:130px;height:50px;font-size:large;
-color:rgba(255,255,255,1);background-color:rgba(0,0,50,1);padding:5px;
-border-style:solid;border-width:1px;border-color:rgba(255,255,255,1);"
-id="body_body_form_security" name="security-code-display"  />
- <input type="text" style="width:200px;height:50px;font-size:large;text-align:center;padding:5px;" 
- id="body_body_form_security_code"  name="security-code" required="required"  onkeyup="check_result();"/>
-</form>
-<div style="text-align:center;font-size:x-large;color:rgba(255,0,0,1);margin-top:25px;" id="show-result"></div>
-</div>
--->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-glow">Explore Projects</a>
+          <a href="#contact" class="btn btn-glass">Get In Touch</a>
+        </div>
+        -->
+      </div>
 
+      <!-- Interactive Profile Dossier Card -->
+      <aside class="dossier-card" id="tilt-card">
+        <div class="dossier-header">
+          <span class="dossier-id">QUICK INTRODUCTION</span>
+          <span class="dossier-badge">[ Last Update : 2024 ]</span>
+        </div>
+        <ul class="dossier-list">
+            <li class="dossier-item">
+            <span class="dossier-key">NAME</span>
+            <span class="dossier-val">Deepak</span>
+          </li>
+          <li class="dossier-item">
+            <span class="dossier-key">DOMAIN</span>
+            <span class="dossier-val">Science with nature & humanity</span>
+          </li>
+          <li class="dossier-item">
+            <span class="dossier-key">FOCUS</span>
+            <span class="dossier-val">Embedded systems, AI, IOT,  &amp; Biomedical engineering </span>
+          </li>
+          <li class="dossier-item">
+            <span class="dossier-key">APPROACH</span>
+            <span class="dossier-val">First-Principles, Inversion, Root Cause Analysis, Second-Order</span>
+          </li>
+      
+          
+          <!--
+          <li class="dossier-item">
+            <span class="dossier-key">TELEMETRY</span>
+            <span class="dossier-val" id="telemetry-fps">60 FPS // LIVE</span>
+          </li>
+          -->
+          
+        </ul>
+      </aside>
+    </section>
 
-<!------------------------Display----------------------------------------->
+  
 
-<div id="display" onkeydown="return false;" onmousedown="return false;" style="display:block;">
+    <!-- Journey & Milestones -->
+    <section id="journey">
+      <div class="section-head">
+        <span class="section-kicker">Education & Certification</span>
+        <h2 class="section-title" style="font-size:medium;">Quick overview</h2>
+      </div>
 
-<div id="speaker">
-<span id="speaker_img"  onclick="text_to_speech();">&#128264;</span>
-</div>
+      <div class="timeline">
 
-<div id="body">
-
-
-<!--<div id="image">
-<!--<img id="image_img" src=" " alt="&#128522;" onclick="smile();" />-->
-<!--<span id="image_img" onclick="smile();">&#128522; </span>
-<span id="image_emoji" onclick="smile();">&#128540;</span>
-</div>-->
-
-<div id="about">
-<h1 id="name_h1"><i>DEEPAK</i></h1>
-<p id="about_p1">
-<b><i style="font-size:x-small;color:rgba(255,255,255,1);">A Science Student</i></b> </br>
-Hello, Welcome to My Website</br>
-</p>
-<hr>
-
-
-<p id="about_p2">
-<span style="font-size:small;color:rgba(0,255,255,1);">[ Last Update : 2024 ] </span><br/><br/>
-<!--<b>Short Introduction :</b> <br/><br/>-->
-
-<b> Full Name :</b> Deepak Kumar Naik
-
-</br>
-
-<b>SKILLS :</b> Research, Computer Programming and Studying Human Nature
-<ul>
-<li>Full Stack Web Developer</li>
-<li>Android Developer</li>
-<li>Linux System Administrator</li>
-<li>IOT, Automation and Robotics</li>
-</ul>
-
-<div style="width:100%;background-color:rgba(0,100,200,0.8);color:rgba(255,255,255,1);padding-left:5px;"><b> EDUCATION :</b></div>
-<b><span style="color:rgba(255,255,255,1);font-family: Times, Times New Roman, serif ;"> 
-BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span> (2016-2019), <br/> 
- MSc (Master of Science) in <span style="color:rgba(0,255,0,1);">Computer Science</span> (2019-2021), <br/>
- </span>
- </b>
-
- <br/>
- 
- <i>Others : </i><br/>
- <span style="font-family: Times, Times New Roman, serif ;"><span style="color:rgba(0,255,0,1);">PGDCA</span> (Post Graduate Diploma In Computer Application) [Pvt. , (OFL)]</span> <br/><br/>
- 
- <!-------------WORK EXPERIENCE------------------------------->
-<div style="width:100%;background-color:rgba(0,100,200,0.8);color:rgba(255,255,255,1);padding-left:5px;"><b> WORK EXPERIENCE :</b></div>
-<ul>
-<li>Developed and managed the <a href="https://hypernerve.com" target="_blank" style="text-decoration:none;color:rgba(255,255,255,1);">"Hyper Nerve"</a> search engine project for over 5 years.</li>
-<li>Developed many IoT and wireless automation projects using NodeMCU, Arduino, and ESP32 over the past 9 years.</li>
-</ul>
- 
- <!-----------CERTIFICATION--------------->
- 
- <div style="width:100%;background-color:rgba(0,100,200,0.8);color:rgba(255,255,255,1);padding-left:5px;"><b> CERTIFICATION :</b></div>
-  <ul>
-  <li>Space science and Technology AwaReness Training (2024) [IIRS ISRO, DOS GOI, (OL)]</li>
- 
- <li>Basic Microbiology (15-04-2024) [WHO - Health Emergencies Programme, (OL)]</li>
- 
- 
- <li>Certificate Course on PFA (Psychological First Aid) [Johns Hopkins University, USA, (OL)] , 05-03-2020, 
- <span style="color:rgba(0,50,50,1);">coursera.org/verify/N8AG94Y4AAPF</span> </li>
- 
- 
- <li>One-Week Online Lecture Series on "Trends in Artificial Intelligence and Machine Learning" [16-07-2020 - 21-07-2020, Department of 
+        
+          <div class="timeline-item">
+          <span class="timeline-date">2021</span>
+          <h3> MSc (Master of Science)</h3>
+          <p>Computer Science</p>
+        </div>
+        
+          <div class="timeline-item">
+          <span class="timeline-date">2019</span>
+          <h3>BSc (Bachelor of Science)</h3>
+          <p>Physics</p>
+        </div>
+        
+          <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>UGC NET</h3>
+          <p>Computer Science & Application</p>
+        </div>
+        
+         <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>PGDCA</h3>
+          <p>Post Graduate Diploma In Computer Application [Pvt. , (OFL)]</p>
+        </div>
+        
+        
+         <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>Certification</h3>
+          <p>Space science and Technology AwaReness Training (2024) [IIRS ISRO, DOS GOI, (OL)]</p>
+        </div>
+        
+         <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>Certification</h3>
+          <p>Basic Microbiology (15-04-2024) [WHO - Health Emergencies Programme, (OL)]</p>
+        </div>
+        
+         <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>Certificate Course on PFA (Psychological First Aid) [Johns Hopkins University, USA, (OL)] , 05-03-2020</h3>
+          <p>coursera.org/verify/N8AG94Y4AAPF</p>
+        </div>
+        
+        
+          <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>Other certification</h3>
+          <p>
+          
+          <li>One-Week Online Lecture Series on "Trends in Artificial Intelligence and Machine Learning" [16-07-2020 - 21-07-2020, Department of 
  Computer Application, North Orissa University, Baripada, Odisha, India, (OL)] </li>
  
  <li>Awareness program for General Public on CoVID-19 [VIMSAR, OSOU, Sambalpur, Odisha, (OL)], 13-07-2020, 
@@ -199,6 +1166,7 @@ BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span>
  [Department of Computer Science Engineering and Application, Sambalpur University Institute of Information Technology (SUIIT), (OL)], 
  15-03-2021 - 17-03-2021, <span style="color:rgba(0,50,50,1);">Certificate ID : DADMLM-2021/087</span> </li>
  
+      
  <li>One Week International Workshop on "Recent Advancement on Electronics and Computer Intelligence (RAECI-2021)" 
  [Department of Electronics and Department of Computer Science Engineering and Application, 
  Sambalpur University Institute of Information Technology (SUIIT), (OL)], 26-04-2021 - 30-04-2021</li>
@@ -206,178 +1174,588 @@ BSc (Bachelor of Science) in <span style="color:rgba(0,255,0,1);">Physics</span>
  <li>One Week International Seminar on "Electronics and Computing Technology (ISECT-2021)" 
  [Department of Electronics
  Sambalpur University Institute of Information Technology (SUIIT), (OL)], 27-03-2021 - 01-04-2021</li>
- </ul>
- <br/>and many offline and online certificate course
-</i>
-<br/><br/>
-<span style="color:rgba(150,200,200,1);">Abbreviation : [Pvt. = Private , (OL) = Online , (OFL) = Offline]</span>
+ 
+ 
 
-<br/>
-<br/>
+          </p>
+        </div>
+        
+        
+         <div class="timeline-item">
+          <span class="timeline-date">// Others</span>
+          <h3>// Others</h3>
+          <p> // And many offline and online certificate course</p>
+        </div>
+        
+        
+        
+      </div>
+    </section>
 
-<div style="width:100%;background-color:rgba(0,100,200,0.8);color:rgba(255,255,255,1);padding-left:5px;"><b> HOBBY :</b></div>
-<i> Invention Hobbyist, Singing Hobbyist, Exploring and Learning new Things
-</i>
+<!--------------------------------------------WORKS------------------------------------------------------------------------------>
+  <!-- Selected Projects Showcase -->
+    <section id="projects">
+      <div class="section-head">
+        <span class="section-kicker">PAST WORK EXPERIENCE & PROJECTS</span>
+        <h2 class="section-title" style="font-size:medium;">Quick Overview</h2>
+      </div>
 
-<br/><br/>
+      <!-- Interactive Category Filters -->
+      <div class="filter-bar">
+      
+         <button class="filter-btn active" data-filter="software">SOFTWARE</button>
+        <button class="filter-btn " data-filter="hardware">IOT & AI</button>
+        <button class="filter-btn" data-filter="bio-science">BIOMEDICAL</button>
+        <button class="filter-btn" data-filter="research">THEORITICAL</button>
+       
+      </div>
 
-<div style="width:100%;background-color:rgba(0,100,200,0.8);color:rgba(255,255,255,1);padding-left:5px;"><b> AIM :</b></div>
-<i>
- Making better life of human with health, technology, psychology and with making the earth suitable and peace place for human.
-And many more.
-</i>
-</br></br>
+      <div class="cards-grid">
+      
+        <article class="portfolio-card" data-category="software">
+          <div>
+            <div class="card-top">
+              <span class="card-num">Search engine</span>
+              <a href="#contact" class="card-link-icon">DETAILS &rarr;</a>
+            </div>
+            <h3>Fully functional search engine</h3>
+            <p>Autonomous search system with web indexing and crawling systems. At currently it is functional as a side software 
+            at our project site. It is removed as main project because of lack of resources and support.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">HTML, CSS, JS</span>
+            <span class="tech-pill">Python</span>
+          </div>
+        </article>
 
-<i>
-<b>NATIONALITY :</b> 
-<span style="color:rgba(255,150,0,1);">In</span><!--
+        <article class="portfolio-card hidden" data-category="hardware">
+          <div>
+            <div class="card-top">
+              <span class="card-num">Fire detection system</span>
+              <a href="#contact" class="card-link-icon">DETAILS &rarr;</a>
+            </div>
+            <h3>Detecting fire to save life</h3>
+            <p>This IOT system able to detect as possible types of fire (including invisible fire) at a specific range and some harmful gases to protect human by alarming and by sending data to other systems.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-pill">Arduino, ESP, NodeMCU, Rpi pico</span>
+            <span class="tech-pill">C++, Python</span>
+            <span class="tech-pill">WIFI, NRF, LORA</span>
+          </div>
+        </article>
+
+        <article class="portfolio-card hidden" data-category="bio-science">
+          <div>
+            <div class="card-top">
+              <span class="card-num">Advanced CPR</span>
+              <a href="#contact" class="card-link-icon">DETAILS &rarr;</a>
+            </div>
+            <h3>Advanced CPR</h3>
+            <p>Can't be revealed here</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-pill">Bio-Science</span>
+            <span class="tech-pill">Physics</span>
+            <span class="tech-pill">Chemistry</span>
+          </div>
+        </article>
+
+        <article class="portfolio-card hidden" data-category="research">
+          <div>
+            <div class="card-top">
+              <span class="card-num">Space Time Mass and Energy</span>
+              <a href="#contact" class="card-link-icon">DETAILS &rarr;</a>
+            </div>
+            <h3>Beyond Imagination </h3>
+            <p>Can't be revealed here</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-pill">Philosophy</span>
+            <span class="tech-pill">Physics</span>
+            <span class="tech-pill">Natural Science </span>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+
+<!---------------------------------------------------CONTACT----------------------------------------------------------->
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact-panel">
+        <span class="section-kicker">HOBBY SKILL AIM</span>
+        <h4>HOBBY</h4>
+        <p>Invention Hobbyist, Singing Hobbyist, Exploring and Learning new Things</p>
+        
+         <h4>SKILL</h4>
+        <p>
+        Scientific Research, Computer Programming and Studying Human Nature & Philosophy
+<ul>
+<li>Full Stack Web Developer & Android Developer</li>
+<li>Linux System Administrator</li>
+<li>IoT, Machine Learning & AI</li>
+<li>Biomedical engineering</li>
+<li>Bio physiology</li>
+</ul>
+        </p>
+        
+        
+         <h4>AIM</h4>
+        <p> Making better life of human with health, technology, psychology and with making the earth suitable and peace place for human and other animals.
+And many more.</p>
+        
+     
+     <h2>CONTACT</h2>
+     
+        <a href="mailto:email@deepak.ind.in" class="btn btn-glow"><img  style="width:20px" src="image/general/email.png"  alt="SocialLink" target="_blank" /></a>
+       
+       <div class="social-links">
+       
+    <a href="https://telegram.com" target="_blank" rel="noopener" class="btn btn-glass">
+    <img style="width:20px" src="image/general/telegram.png"  alt="SocialLink" target="_blank"/></a>
+          
+    <a href="https://x.com/KumarDeepakNaik" target="_blank" rel="noopener" class="btn btn-glass">
+          <img  style="width:20px" src="image/general/twitter.png"  alt="SocialLink" target="_blank"/></a>
+          
+    <a href="https://facebook.com/#" target="_blank" rel="noopener" class="btn btn-glass">
+    <img style="width:20px" src="image/general/facebook.png"  alt="SocialLink" target="_blank"/></a>
+               
+    <a href="https://linkedin.com/in/#" target="_blank" rel="noopener" class="btn btn-glass">
+    <img style="width:20px" src="image/general/linkedin.png"  alt="SocialLink" target="_blank"/></a>
+    
+     <a href="https://github.com/#" target="_blank" rel="noopener" class="btn btn-glass">
+    <img style="width:20px" src="image/general/github.png"  alt="SocialLink" target="_blank"/></a>
+        
+        
+        </div>
+        
+          <a href="#about" class="btn btn-glow" style="margin-top:15px;">Back to Top &uarr;</a>
+        
+      </div>
+    </section>
+  </main>
+<!--------------------------------------FOOTER-------------------------------------------------------------------------->
+  <footer>
+    &copy; DEEPAK &bull;     
+    
+    <span>
+            <span class="dossier-key">Nationality</span>
+            <span class="dossier-val"><span style="color:rgba(255,150,0,1);">In</span><!--
 --><span style="color:rgba(255,255,255,1);">di</span><!--
---><span style="color:rgba(0,255,0,1);">an</span>
-</i>
+--><span style="color:rgba(0,255,0,1);">an</span>(UTC +5:30)</span>
+          </span>
+          
+  </footer>
 
-<br/>
-<br/>
-<i>
-<b>FAVORITE SUBJECT :</b> Physics
-</i>
-</p>
-</div>
+  <!-- Three.js WebGL Library -->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+  <script src="Three.js/three.min.js"></script>
+  <script>
+    // --- 1. Mobile Navigation & Project Filter Logic ---
+    const mobileBtn = document.getElementById('mobile-btn');
+    const navMenu = document.getElementById('nav-menu');
 
+    mobileBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      mobileBtn.textContent = navMenu.classList.contains('open') ? 'CLOSE' : 'MENU';
+    });
 
-</div>
+    document.querySelectorAll('.nav-menu a').forEach(item => {
+      item.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileBtn.textContent = 'MENU';
+      });
+    });
 
-<hr/>
+    // Portfolio Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.portfolio-card');
 
-<div id="body-footer">
+    filterBtns.forEach(btn => {
+    /*highlight selected button and set active */ 
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const category = btn.getAttribute('data-filter');
 
-<div id="body-footer-contact">
+        projectCards.forEach(card => {
+        /*loop through each portfolio card and button click and match category to show and hidden others*/
+          if (card.getAttribute('data-category') === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
 
-<table id="body-footer-contact-table">
-<tr>
-<td>
-<a href="mailto:kumardeepaknaik@yahoo.com">
-<img  style="width:20px" src="image/general/email.png"  alt="SocialLink" target="_blank" onclick="email_alert();"/></a>
-</td>
-<td>
-<a href="https://twitter.com/KumarDeepakNaik">
-<img  style="width:20px" src="image/general/twitter.png"  alt="SocialLink" target="_blank"/></a>
-</td>
-<td>
-<a href="https://t.me/#">
-<img style="width:20px" src="image/general/telegram.png"  alt="SocialLink" target="_blank"/></a>
-</td>
-<td> <a href="https://facebook.com/#">
-<img style="width:20px" src="image/general/facebook.png"  alt="SocialLink" target="_blank"/></a>
-</td>
-<td> <a href="https://linkedin.com/in/KumarDeepakNaik">
-<img style="width:20px" src="image/general/linkedin.png"  alt="SocialLink" target="_blank"/></a>
-</td>
-<td> <a href="https://github.com/#">
-<img style="width:20px" src="image/general/github.png"  alt="SocialLink" target="_blank"/></a>
-</td>
- </tr> 
-</table>
-</div>
-
-</div>
-
-
-
-<script src="js/js.js"></script>
-
-<script>
-/*
-var display_security=document.getElementById('display-security');
-display_security.style.display="block";
-var display=document.getElementById('display');
-display.style.display='none';
-
-//////////////////////////////*****************************///////////////////////////*******/
-
-/*
-
-  var x_value = Math.floor((Math.random() * 10) + 1);
-    var y_value = Math.floor((Math.random() * 10) + 1);
-	    var z_symbol = Math.floor((Math.random() * 4) + 1);
-		
-		if(z_symbol==1){
-			var result=x_value+(y_value*x_value);
-			var x_value_string=x_value.toString();
-			var y_value_string=y_value.toString();
-			window.onload=function(){
-			var result_string=x_value_string+"+"+y_value_string+"x"+x_value_string+"   =";
-			  document.getElementById("body_body_form_security").value = result_string;
-			  }
-		}
-		else if(z_symbol==2){
-			var result=x_value-(y_value+x_value);
-			var x_value_string=x_value.toString();
-			var y_value_string=y_value.toString();
-			window.onload=function(){
-			var result_string=x_value_string+"-("+y_value_string+"+"+x_value_string+")   =";
-			  document.getElementById("body_body_form_security").value = result_string;
-			  }
-		}
-		
-			else if(z_symbol==3){
-			var result=(x_value*y_value)-x_value;
-			var x_value_string=x_value.toString();
-			var y_value_string=y_value.toString();
-			window.onload=function(){
-			var result_string=x_value_string+"x"+y_value_string+"-"+x_value_string+"   =";
-			  document.getElementById("body_body_form_security").value = result_string;
-			  }
-		}
-		
-		
-			else if(z_symbol==4){
-			var result=(x_value >>> 0).toString(2);
-			var x_value_string=x_value.toString();
-			var y_value_string=y_value.toString();
-			window.onload=function(){
-			var result_string="Binary of "+x_value_string+" =";
-			  document.getElementById("body_body_form_security").value = result_string;
-			  }
-		}
-		
-		
-
-  //////////////////////////////////////////////********************************************/
-  
- /* function check_result(){
-      var submit_result=document.getElementById("body_body_form_security_code");
-    if (submit_result.value.trim()!=result) {
-document.getElementById("show-result").innerHTML="Wrong !";
-document.getElementById("show-result").style.color="rgba(255,0,0,1)";
-
+    // Subtle 3D Tilt Effect on Profile Dossier Card (Desktop)
+    const tiltCard = document.getElementById('tilt-card');
+    if (tiltCard && window.innerWidth > 900) {
+      tiltCard.addEventListener('mousemove', (e) => {
+        const rect = tiltCard.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        tiltCard.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+      });
+      tiltCard.addEventListener('mouseleave', () => {
+        tiltCard.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg)';
+      });
     }
-	if (submit_result.value.trim()==result) {
-document.getElementById("show-result").innerHTML="Correct !";
-document.getElementById("show-result").style.color="rgba(0,255,0,1)";
-setTimeout(show_display_display, 1000);
+
+    // --- 2. Photorealistic 3D Universe Engine ---
+    const canvas = document.getElementById('cosmos-canvas');
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x010206, 0.0012);
+
+    const isMobile = window.innerWidth < 768;
+    const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1200);
+    camera.position.set(0, 6, isMobile ? 58 : 44);
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      powerPreference: 'high-performance'
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    function createRadialGlow(innerColor, midColor, outerColor) {
+      const c = document.createElement('canvas');
+      c.width = 128;
+      c.height = 128;
+      const ctx = c.getContext('2d');
+      const g = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+      g.addColorStop(0, innerColor);
+      g.addColorStop(0.35, midColor);
+      g.addColorStop(1, outerColor);
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, 128, 128);
+      return new THREE.CanvasTexture(c);
     }
-	
-	function show_display_display(){
-	
-	var display_security=document.getElementById('display-security');
-display_security.style.display="none";
-var display=document.getElementById('display');
-display.style.display='block';
-	
-	}
-	
-  }
 
-/*////////////////////////////////////////*/
-/*
-function email_alert(){
-alert("This is temporary email, may be work !");
-}
+    const starGlowTex = createRadialGlow(
+      'rgba(255, 255, 255, 1)',
+      'rgba(180, 225, 255, 0.55)',
+      'rgba(0, 0, 0, 0)'
+    );
 
-</script>
+    const nebulaBlueTex = createRadialGlow(
+      'rgba(56, 189, 248, 0.22)',
+      'rgba(99, 102, 241, 0.08)',
+      'rgba(0, 0, 0, 0)'
+    );
 
-</div>
+    const nebulaPurpleTex = createRadialGlow(
+      'rgba(168, 85, 247, 0.18)',
+      'rgba(236, 72, 153, 0.06)',
+      'rgba(0, 0, 0, 0)'
+    );
 
+    // Layer A: Realistic Spectral Deep-Space Starfield
+    const starCount = isMobile ? 2800 : 5200;
+    const starPositions = new Float32Array(starCount * 3);
+    const starColors = new Float32Array(starCount * 3);
+
+    const spectralPalette = [
+      new THREE.Color('#9bb0ff'),
+      new THREE.Color('#cad7ff'),
+      new THREE.Color('#f8f7ff'),
+      new THREE.Color('#fff4ea'),
+      new THREE.Color('#ffd2a1'),
+      new THREE.Color('#ffcc6f')
+    ];
+
+    for (let i = 0; i < starCount; i++) {
+      const i3 = i * 3;
+      const r = 40 + Math.random() * 340;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(2 * Math.random() - 1);
+
+      starPositions[i3] = r * Math.sin(phi) * Math.cos(theta);
+      starPositions[i3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      starPositions[i3 + 2] = r * Math.cos(phi);
+
+      const col = spectralPalette[Math.floor(Math.random() * spectralPalette.length)];
+      const brightness = 0.55 + Math.random() * 0.45;
+      starColors[i3] = col.r * brightness;
+      starColors[i3 + 1] = col.g * brightness;
+      starColors[i3 + 2] = col.b * brightness;
+    }
+
+    const starsGeo = new THREE.BufferGeometry();
+    starsGeo.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    starsGeo.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
+
+    const starsMat = new THREE.PointsMaterial({
+      size: 1.15,
+      map: starGlowTex,
+      vertexColors: true,
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+
+    const deepStars = new THREE.Points(starsGeo, starsMat);
+    scene.add(deepStars);
+
+    // Layer B: Milky Way Galactic Dust Band
+    const milkyWayCount = isMobile ? 2400 : 4500;
+    const mwPos = new Float32Array(milkyWayCount * 3);
+    const mwCol = new Float32Array(milkyWayCount * 3);
+
+    const mwInner = new THREE.Color('#e0f2fe');
+    const mwMid = new THREE.Color('#7dd3fc');
+    const mwOuter = new THREE.Color('#a855f7');
+
+    for (let i = 0; i < milkyWayCount; i++) {
+      const i3 = i * 3;
+      const dist = Math.pow(Math.random(), 1.6) * 85;
+      const angle = Math.random() * Math.PI * 2;
+      const armOffset = Math.sin(dist * 0.14 + angle * 2) * 4.5;
+      const spreadY = (Math.random() - 0.5) * (9 - dist * 0.08);
+
+      mwPos[i3] = Math.cos(angle) * dist + armOffset;
+      mwPos[i3 + 1] = spreadY;
+      mwPos[i3 + 2] = Math.sin(angle) * dist - 35;
+
+      const c = mwInner.clone();
+      if (dist < 28) {
+        c.lerp(mwMid, dist / 28);
+      } else {
+        c.copy(mwMid).lerp(mwOuter, (dist - 28) / 57);
+      }
+      mwCol[i3] = c.r * 0.85;
+      mwCol[i3 + 1] = c.g * 0.85;
+      mwCol[i3 + 2] = c.b * 0.85;
+    }
+
+    const mwGeo = new THREE.BufferGeometry();
+    mwGeo.setAttribute('position', new THREE.BufferAttribute(mwPos, 3));
+    mwGeo.setAttribute('color', new THREE.BufferAttribute(mwCol, 3));
+
+    const mwMat = new THREE.PointsMaterial({
+      size: 0.9,
+      map: starGlowTex,
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.75,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+
+    const milkyWayBand = new THREE.Points(mwGeo, mwMat);
+    milkyWayBand.rotation.x = 0.42;
+    milkyWayBand.rotation.z = -0.32;
+    scene.add(milkyWayBand);
+
+    // Layer C: Volumetric Cosmic Nebula Clouds
+    const nebulaGroup = new THREE.Group();
+    const nebulaConfigs = [
+      { tex: nebulaBlueTex, pos: [-24, 12, -45], scale: 65 },
+      { tex: nebulaPurpleTex, pos: [28, -10, -55], scale: 75 },
+      { tex: nebulaBlueTex, pos: [10, 18, -70], scale: 80 },
+      { tex: nebulaPurpleTex, pos: [-30, -16, -60], scale: 60 }
+    ];
+
+    nebulaConfigs.forEach(cfg => {
+      const mat = new THREE.SpriteMaterial({
+        map: cfg.tex,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+      const sprite = new THREE.Sprite(mat);
+      sprite.position.set(...cfg.pos);
+      sprite.scale.set(cfg.scale, cfg.scale, 1);
+      nebulaGroup.add(sprite);
+    });
+    scene.add(nebulaGroup);
+
+    // Layer D: Realistic Shaded Ringed Planet
+    function createPlanetTexture() {
+      const c = document.createElement('canvas');
+      c.width = 512;
+      c.height = 256;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 0, 256);
+      grad.addColorStop(0.0, '#0f172a');
+      grad.addColorStop(0.18, '#1e3a5f');
+      grad.addColorStop(0.32, '#38bdf8');
+      grad.addColorStop(0.45, '#1d4ed8');
+      grad.addColorStop(0.55, '#60a5fa');
+      grad.addColorStop(0.72, '#1e293b');
+      grad.addColorStop(0.88, '#312e81');
+      grad.addColorStop(1.0, '#090d16');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 512, 256);
+
+      for (let y = 0; y < 256; y += 4) {
+        ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.06})`;
+        ctx.fillRect(0, y, 512, 2);
+      }
+      return new THREE.CanvasTexture(c);
+    }
+
+    function createRingTexture() {
+      const c = document.createElement('canvas');
+      c.width = 256;
+      c.height = 32;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 256, 0);
+      grad.addColorStop(0.0, 'rgba(56, 189, 248, 0)');
+      grad.addColorStop(0.2, 'rgba(125, 211, 252, 0.35)');
+      grad.addColorStop(0.38, 'rgba(15, 23, 42, 0.05)');
+      grad.addColorStop(0.55, 'rgba(165, 180, 252, 0.45)');
+      grad.addColorStop(0.85, 'rgba(56, 189, 248, 0.22)');
+      grad.addColorStop(1.0, 'rgba(56, 189, 248, 0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 256, 32);
+      return new THREE.CanvasTexture(c);
+    }
+
+    const planetSystem = new THREE.Group();
+    const planetGeo = new THREE.SphereGeometry(4.2, 48, 48);
+    const planetMat = new THREE.MeshStandardMaterial({
+      map: createPlanetTexture(),
+      roughness: 0.75,
+      metalness: 0.1
+    });
+    const planetMesh = new THREE.Mesh(planetGeo, planetMat);
+    planetSystem.add(planetMesh);
+
+    const ringGeo = new THREE.RingGeometry(5.6, 9.8, 64);
+    const posAttr = ringGeo.attributes.position;
+    const uvAttr = ringGeo.attributes.uv;
+    for (let i = 0; i < posAttr.count; i++) {
+      const vx = posAttr.getX(i);
+      const vy = posAttr.getY(i);
+      const dist = Math.sqrt(vx * vx + vy * vy);
+      uvAttr.setXY(i, (dist - 5.6) / (9.8 - 5.6), 0.5);
+    }
+
+    const ringMat = new THREE.MeshBasicMaterial({
+      map: createRingTexture(),
+      side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 0.85,
+      depthWrite: false
+    });
+    const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+    ringMesh.rotation.x = Math.PI / 2.35;
+    ringMesh.rotation.y = 0.25;
+    planetSystem.add(ringMesh);
+
+    planetSystem.position.set(isMobile ? 12 : 22, isMobile ? 14 : 10, -28);
+    scene.add(planetSystem);
+
+    const sunLight = new THREE.DirectionalLight(0xe0f2fe, 1.85);
+    sunLight.position.set(-25, 20, 30);
+    scene.add(sunLight);
+
+    const rimLight = new THREE.DirectionalLight(0x818cf8, 0.55);
+    rimLight.position.set(25, -15, -20);
+    scene.add(rimLight);
+
+    const ambientLight = new THREE.AmbientLight(0x0f172a, 0.45);
+    scene.add(ambientLight);
+
+    // Layer E: Shooting Star
+    const meteorGeo = new THREE.BufferGeometry();
+    const meteorPts = new Float32Array([0, 0, 0, -6, 2.5, 0]);
+    meteorGeo.setAttribute('position', new THREE.BufferAttribute(meteorPts, 3));
+    const meteorMat = new THREE.LineBasicMaterial({
+      color: 0xe0f2fe,
+      transparent: true,
+      opacity: 0
+    });
+    const meteorLine = new THREE.Line(meteorGeo, meteorMat);
+    scene.add(meteorLine);
+
+    let meteorTimer = 0;
+    let meteorActive = false;
+
+    // --- 3. Interactive Parallax & Smooth Animation Loop ---
+    let pointerX = 0;
+    let pointerY = 0;
+    let scrollPos = 0;
+
+    function handleMove(x, y) {
+      pointerX = (x / window.innerWidth - 0.5) * 2;
+      pointerY = (y / window.innerHeight - 0.5) * 2;
+    }
+
+    window.addEventListener('mousemove', e => handleMove(e.clientX, e.clientY), { passive: true });
+    window.addEventListener('touchmove', e => {
+      if (e.touches.length > 0) handleMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener('scroll', () => {
+      scrollPos = window.scrollY;
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+
+    const clock = new THREE.Clock();
+    const fpsEl = document.getElementById('telemetry-fps');
+    let frames = 0;
+    let lastCheck = performance.now();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const dt = clock.getDelta();
+      const elapsed = clock.getElapsedTime();
+
+      deepStars.rotation.y = elapsed * 0.008;
+      deepStars.rotation.x = elapsed * 0.003;
+      milkyWayBand.rotation.y = elapsed * 0.018;
+      planetMesh.rotation.y = elapsed * 0.08;
+
+      meteorTimer += dt;
+      if (!meteorActive && meteorTimer > 6) {
+        meteorActive = true;
+        meteorTimer = 0;
+        meteorLine.position.set(35 + Math.random() * 20, 22 + Math.random() * 12, -25);
+        meteorMat.opacity = 0.9;
+      }
+      if (meteorActive) {
+        meteorLine.position.x -= 55 * dt;
+        meteorLine.position.y -= 23 * dt;
+        meteorMat.opacity -= 0.9 * dt;
+        if (meteorMat.opacity <= 0) {
+          meteorActive = false;
+          meteorMat.opacity = 0;
+        }
+      }
+
+      const targetCamX = pointerX * 4.5;
+      const targetCamY = 6 - pointerY * 3 - scrollPos * 0.008;
+      const targetCamZ = (window.innerWidth < 768 ? 58 : 44) - scrollPos * 0.006;
+
+      camera.position.x += (targetCamX - camera.position.x) * 0.035;
+      camera.position.y += (targetCamY - camera.position.y) * 0.035;
+      camera.position.z += (targetCamZ - camera.position.z) * 0.035;
+      camera.lookAt(0, -scrollPos * 0.004, -15);
+
+      renderer.render(scene, camera);
+
+      frames++;
+      const now = performance.now();
+      if (now - lastCheck >= 600) {
+        const currentFps = Math.round((frames * 1000) / (now - lastCheck));
+        if (fpsEl) fpsEl.textContent = `${currentFps} FPS // LIVE`;
+        frames = 0;
+        lastCheck = now;
+      }
+    }
+
+    animate();
+  </script>
 </body>
-<!--BODY end-->
 </html>
